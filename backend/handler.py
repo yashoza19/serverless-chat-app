@@ -23,3 +23,16 @@ def ping(event, context):
     }
 
     return response
+
+def connection_manager(event, context):
+    
+    connectionID = event["requestContext"].get("connectionId")
+    
+    if event["requestContext"]["eventType"] == "CONNECT":
+        logger.info("Connect requested")
+        
+    elif event["requestContext"]["eventType"] == "DISCONNECT":
+        logger.info("Disconnect requested")
+        
+    else:
+        logger.error("Connection manager received unrecognized eventType.")
