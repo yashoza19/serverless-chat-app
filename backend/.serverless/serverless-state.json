@@ -1,8 +1,8 @@
 {
   "service": {
-    "service": "serverless-chat-app",
+    "service": "serverless-chat",
     "serviceObject": {
-      "name": "serverless-chat-app"
+      "name": "serverless-chat"
     },
     "provider": {
       "stage": "dev",
@@ -102,31 +102,31 @@
           "ConnectionManagerLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/serverless-chat-app-dev-connectionManager"
+              "LogGroupName": "/aws/lambda/serverless-chat-dev-connectionManager"
             }
           },
           "DefaultMessageLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/serverless-chat-app-dev-defaultMessage"
+              "LogGroupName": "/aws/lambda/serverless-chat-dev-defaultMessage"
             }
           },
           "GetRecentMessagesLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/serverless-chat-app-dev-getRecentMessages"
+              "LogGroupName": "/aws/lambda/serverless-chat-dev-getRecentMessages"
             }
           },
           "SendMessageLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/serverless-chat-app-dev-sendMessage"
+              "LogGroupName": "/aws/lambda/serverless-chat-dev-sendMessage"
             }
           },
           "PingLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/serverless-chat-app-dev-ping"
+              "LogGroupName": "/aws/lambda/serverless-chat-dev-ping"
             }
           },
           "IamRoleLambdaExecution": {
@@ -154,7 +154,7 @@
                     "Fn::Join": [
                       "-",
                       [
-                        "serverless-chat-app",
+                        "serverless-chat",
                         "dev",
                         "lambda"
                       ]
@@ -171,7 +171,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/serverless-chat-app-dev*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/serverless-chat-dev*:*"
                           }
                         ]
                       },
@@ -182,7 +182,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/serverless-chat-app-dev*:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/serverless-chat-dev*:*:*"
                           }
                         ]
                       },
@@ -212,7 +212,7 @@
                 "Fn::Join": [
                   "-",
                   [
-                    "serverless-chat-app",
+                    "serverless-chat",
                     "dev",
                     {
                       "Ref": "AWS::Region"
@@ -230,9 +230,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat-app/dev/1592954000626-2020-06-23T23:13:20.626Z/serverless-chat-app.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
               },
-              "FunctionName": "serverless-chat-app-dev-connectionManager",
+              "FunctionName": "serverless-chat-dev-connectionManager",
               "Handler": "handler.connection_manager",
               "MemorySize": 1024,
               "Role": {
@@ -248,14 +248,14 @@
               "ConnectionManagerLogGroup"
             ]
           },
-          "ConnectionManagerLambdaVersionmkQSUZEs3IotAiiRI2JS9gbxl6chWfXCitQa12Evf0": {
+          "ConnectionManagerLambdaVersionnI9z4Y22bQWl1U8qhR7A4TSDGRPxjq653aqkikNmbxw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ConnectionManagerLambdaFunction"
               },
-              "CodeSha256": "ncj41ecLlYLqkOVP8aG3/3Puu6uM0lCddobRV8Ngqro="
+              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
             }
           },
           "DefaultMessageLambdaFunction": {
@@ -265,9 +265,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat-app/dev/1592954000626-2020-06-23T23:13:20.626Z/serverless-chat-app.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
               },
-              "FunctionName": "serverless-chat-app-dev-defaultMessage",
+              "FunctionName": "serverless-chat-dev-defaultMessage",
               "Handler": "handler.default_message",
               "MemorySize": 1024,
               "Role": {
@@ -283,14 +283,14 @@
               "DefaultMessageLogGroup"
             ]
           },
-          "DefaultMessageLambdaVersionKP7g2U2UEhoFw9Ika3tEUf2yGvcb5zjXjLdVaeds": {
+          "DefaultMessageLambdaVersiony4keGm7myJShJ8G1N9aRL7YctJdUXgUHJfVJu4gTI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DefaultMessageLambdaFunction"
               },
-              "CodeSha256": "ncj41ecLlYLqkOVP8aG3/3Puu6uM0lCddobRV8Ngqro="
+              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
             }
           },
           "GetRecentMessagesLambdaFunction": {
@@ -300,9 +300,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat-app/dev/1592954000626-2020-06-23T23:13:20.626Z/serverless-chat-app.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
               },
-              "FunctionName": "serverless-chat-app-dev-getRecentMessages",
+              "FunctionName": "serverless-chat-dev-getRecentMessages",
               "Handler": "handler.get_recent_messages",
               "MemorySize": 1024,
               "Role": {
@@ -318,14 +318,14 @@
               "GetRecentMessagesLogGroup"
             ]
           },
-          "GetRecentMessagesLambdaVersionjj315zJZyz932EHW1BQ26rA8y6L8ytnCg3PZktpHfg": {
+          "GetRecentMessagesLambdaVersionIVCgqhLvuZD9XIb0aHyMvZfd2LUDuiIlS2QY7bk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetRecentMessagesLambdaFunction"
               },
-              "CodeSha256": "ncj41ecLlYLqkOVP8aG3/3Puu6uM0lCddobRV8Ngqro="
+              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
             }
           },
           "SendMessageLambdaFunction": {
@@ -335,9 +335,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat-app/dev/1592954000626-2020-06-23T23:13:20.626Z/serverless-chat-app.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
               },
-              "FunctionName": "serverless-chat-app-dev-sendMessage",
+              "FunctionName": "serverless-chat-dev-sendMessage",
               "Handler": "handler.send_message",
               "MemorySize": 1024,
               "Role": {
@@ -353,14 +353,14 @@
               "SendMessageLogGroup"
             ]
           },
-          "SendMessageLambdaVersion5v5IAgv29AdATilAudn51tD7va9EK7l7wvTYSKxhjN4": {
+          "SendMessageLambdaVersiondwsF09ghHrotG4VzHw8V0YSBdT6MIUCyZgobMy6trg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SendMessageLambdaFunction"
               },
-              "CodeSha256": "ncj41ecLlYLqkOVP8aG3/3Puu6uM0lCddobRV8Ngqro="
+              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
             }
           },
           "PingLambdaFunction": {
@@ -370,9 +370,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat-app/dev/1592954000626-2020-06-23T23:13:20.626Z/serverless-chat-app.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
               },
-              "FunctionName": "serverless-chat-app-dev-ping",
+              "FunctionName": "serverless-chat-dev-ping",
               "Handler": "handler.ping",
               "MemorySize": 1024,
               "Role": {
@@ -388,20 +388,20 @@
               "PingLogGroup"
             ]
           },
-          "PingLambdaVersion2O1EaPRhgzMCVGS7aQ0aygeUlfNIOc0PleKWOBzhuM": {
+          "PingLambdaVersion4PuwhQzlH2oOVeBsDMrptuthMM7ZYkIR2Yq4TwF04vQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PingLambdaFunction"
               },
-              "CodeSha256": "ncj41ecLlYLqkOVP8aG3/3Puu6uM0lCddobRV8Ngqro="
+              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
             }
           },
           "ApiGatewayRestApi": {
             "Type": "AWS::ApiGateway::RestApi",
             "Properties": {
-              "Name": "dev-serverless-chat-app",
+              "Name": "dev-serverless-chat",
               "EndpointConfiguration": {
                 "Types": [
                   "EDGE"
@@ -468,7 +468,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1592953993045": {
+          "ApiGatewayDeployment1593028758840": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -520,7 +520,7 @@
           "WebsocketsApi": {
             "Type": "AWS::ApiGatewayV2::Api",
             "Properties": {
-              "Name": "dev-serverless-chat-app-websockets",
+              "Name": "dev-serverless-chat-websockets",
               "RouteSelectionExpression": "$request.body.action",
               "Description": "Serverless Websockets",
               "ProtocolType": "WEBSOCKET"
@@ -836,11 +836,11 @@
               "StageName": "dev",
               "Description": "Serverless Websockets",
               "DeploymentId": {
-                "Ref": "WebsocketsDeploymentW3pWmDXCnUlN6ChLtwkXBM5MJV2TYwowyz0EN9OxzU"
+                "Ref": "WebsocketsDeploymentcMKfw4T6vHJQNsPKJpt7v31xhy9tQo6KEiQq78Lywk"
               }
             }
           },
-          "WebsocketsDeploymentW3pWmDXCnUlN6ChLtwkXBM5MJV2TYwowyz0EN9OxzU": {
+          "WebsocketsDeploymentcMKfw4T6vHJQNsPKJpt7v31xhy9tQo6KEiQq78Lywk": {
             "Type": "AWS::ApiGatewayV2::Deployment",
             "DependsOn": [
               "SconnectWebsocketsRoute",
@@ -866,31 +866,31 @@
           "ConnectionManagerLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ConnectionManagerLambdaVersionmkQSUZEs3IotAiiRI2JS9gbxl6chWfXCitQa12Evf0"
+              "Ref": "ConnectionManagerLambdaVersionnI9z4Y22bQWl1U8qhR7A4TSDGRPxjq653aqkikNmbxw"
             }
           },
           "DefaultMessageLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DefaultMessageLambdaVersionKP7g2U2UEhoFw9Ika3tEUf2yGvcb5zjXjLdVaeds"
+              "Ref": "DefaultMessageLambdaVersiony4keGm7myJShJ8G1N9aRL7YctJdUXgUHJfVJu4gTI"
             }
           },
           "GetRecentMessagesLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetRecentMessagesLambdaVersionjj315zJZyz932EHW1BQ26rA8y6L8ytnCg3PZktpHfg"
+              "Ref": "GetRecentMessagesLambdaVersionIVCgqhLvuZD9XIb0aHyMvZfd2LUDuiIlS2QY7bk"
             }
           },
           "SendMessageLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SendMessageLambdaVersion5v5IAgv29AdATilAudn51tD7va9EK7l7wvTYSKxhjN4"
+              "Ref": "SendMessageLambdaVersiondwsF09ghHrotG4VzHw8V0YSBdT6MIUCyZgobMy6trg"
             }
           },
           "PingLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PingLambdaVersion2O1EaPRhgzMCVGS7aQ0aygeUlfNIOc0PleKWOBzhuM"
+              "Ref": "PingLambdaVersion4PuwhQzlH2oOVeBsDMrptuthMM7ZYkIR2Yq4TwF04vQ"
             }
           },
           "ServiceEndpoint": {
@@ -1035,13 +1035,13 @@
             }
           }
         ],
-        "name": "serverless-chat-app-dev-connectionManager",
+        "name": "serverless-chat-dev-connectionManager",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "ConnectionManagerLambdaVersionmkQSUZEs3IotAiiRI2JS9gbxl6chWfXCitQa12Evf0"
+        "versionLogicalId": "ConnectionManagerLambdaVersionnI9z4Y22bQWl1U8qhR7A4TSDGRPxjq653aqkikNmbxw"
       },
       "defaultMessage": {
         "handler": "handler.default_message",
@@ -1052,13 +1052,13 @@
             }
           }
         ],
-        "name": "serverless-chat-app-dev-defaultMessage",
+        "name": "serverless-chat-dev-defaultMessage",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "DefaultMessageLambdaVersionKP7g2U2UEhoFw9Ika3tEUf2yGvcb5zjXjLdVaeds"
+        "versionLogicalId": "DefaultMessageLambdaVersiony4keGm7myJShJ8G1N9aRL7YctJdUXgUHJfVJu4gTI"
       },
       "getRecentMessages": {
         "handler": "handler.get_recent_messages",
@@ -1069,13 +1069,13 @@
             }
           }
         ],
-        "name": "serverless-chat-app-dev-getRecentMessages",
+        "name": "serverless-chat-dev-getRecentMessages",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "GetRecentMessagesLambdaVersionjj315zJZyz932EHW1BQ26rA8y6L8ytnCg3PZktpHfg"
+        "versionLogicalId": "GetRecentMessagesLambdaVersionIVCgqhLvuZD9XIb0aHyMvZfd2LUDuiIlS2QY7bk"
       },
       "sendMessage": {
         "handler": "handler.send_message",
@@ -1086,13 +1086,13 @@
             }
           }
         ],
-        "name": "serverless-chat-app-dev-sendMessage",
+        "name": "serverless-chat-dev-sendMessage",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "SendMessageLambdaVersion5v5IAgv29AdATilAudn51tD7va9EK7l7wvTYSKxhjN4"
+        "versionLogicalId": "SendMessageLambdaVersiondwsF09ghHrotG4VzHw8V0YSBdT6MIUCyZgobMy6trg"
       },
       "ping": {
         "handler": "handler.ping",
@@ -1105,22 +1105,22 @@
             }
           }
         ],
-        "name": "serverless-chat-app-dev-ping",
+        "name": "serverless-chat-dev-ping",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "PingLambdaVersion2O1EaPRhgzMCVGS7aQ0aygeUlfNIOc0PleKWOBzhuM"
+        "versionLogicalId": "PingLambdaVersion4PuwhQzlH2oOVeBsDMrptuthMM7ZYkIR2Yq4TwF04vQ"
       }
     },
     "serviceFilename": "serverless.yml",
     "layers": {},
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/Users/yashoza/Desktop/serverless-chat-app/backend/.serverless/serverless-chat-app.zip"
+    "artifact": "/Users/yashoza/Desktop/serverless-chat-app/backend/.serverless/serverless-chat.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/serverless-chat-app/dev/1592954000626-2020-06-23T23:13:20.626Z",
-    "artifact": "serverless-chat-app.zip"
+    "artifactDirectoryName": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z",
+    "artifact": "serverless-chat.zip"
   }
 }

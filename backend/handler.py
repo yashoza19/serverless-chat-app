@@ -70,24 +70,20 @@ def get_recent_messages(event, context):
     logger.info("Retrieving most recent messages for CID '{}'"\
             .format(connectionID))
 
-    # Ensure connectionID is set
     if not connectionID:
         logger.error("Failed: connectionId value not set.")
         return _get_response(500, "connectionId value not set.")
 
-    # Get the 10 most recent chat messages
     table = dynamodb.Table("serverless-chat_Messages")
     response = table.query(KeyConditionExpression="Room = :room",
             ExpressionAttributeValues={":room": "general"},
             Limit=10, ScanIndexForward=False)
     items = response.get("Items", [])
 
-    # Extract the relevant data and order chronologically
     messages = [{"username": x["Username"], "content": x["Content"]}
             for x in items]
     messages.reverse()
 
-    # Send them to the client who asked for it
     data = {"messages": messages}
     _send_to_connection(connectionID, data, event)
 
@@ -111,7 +107,6 @@ def send_message(event, context):
     items = response.get("Items", [])
     index = items[0]["Index"] + 1 if len(items) > 0 else 0
 
-    # Add the new message to the database
     timestamp = int(time.time())
     username = body["username"]
     content = body["content"]
@@ -119,24 +114,20 @@ def send_message(event, context):
             "Timestamp": timestamp, "Username": username,
             "Content": content})
 
-    # Get all current connections
     table = dynamodb.Table("serverless-chat_Connections")
     response = table.scan(ProjectionExpression="ConnectionID")
     items = response.get("Items", [])
     connections = [x["ConnectionID"] for x in items if "ConnectionID" in x]
+    logger.debug(connections)
 
-    # Send the message data to all connections
     message = {"username": username, "content": content}
     logger.debug("Broadcasting message: {}".format(message))
     data = {"messages": [message]}
     for connectionID in connections:
+        logger.debug("here")
         _send_to_connection(connectionID, data, event)
-    return _get_response(200, "Message sent to {} connections."\
-            .format(len(connections)))
+    return _get_response(200, "Message sent to all connections.")
 
 def ping(event, context):
-    """
-    Sanity check endpoint that echoes back 'PONG' to the sender.
-    """
     logger.info("Ping requested.")
     return _get_response(200, "PONG!")

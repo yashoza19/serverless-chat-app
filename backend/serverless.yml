@@ -1,4 +1,4 @@
-service: serverless-chat-app
+service: serverless-chat
 
 provider:
     name: aws
@@ -26,8 +26,7 @@ provider:
               - "arn:aws:dynamodb:us-east-1:*:*"
 
 plugins:
-    - serverless-python-requirements
-
+  - serverless-python-requirements
 custom:
     pythonRequirements:
         dockerizePip: true
