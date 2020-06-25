@@ -25,7 +25,15 @@ SECRET_KEY = 'zac+iv^0g&y5@k=zjz8vu)@oc5au$$l+t!8z!*^26u^#_=1$_f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+LOGIN_URL = '/accounts/login/'
+UNIAUTH_LOGIN_DISPLAY_CAS = False
+UNIAUTH_FROM_EMAIL = 'uniauth@serverless-chat.com'
+UNIAUTH_LOGIN_REDIRECT_URL = '/'
+
+# Log emails to the console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 # Application definition
@@ -38,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'chat',
-    'uniauth'
+    'uniauth',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +57,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+AUTHENTICATION_BACKENDS = [
+    'uniauth.backends.LinkedEmailBackend',
+    'uniauth.backends.CASBackend',
 ]
 
 ROOT_URLCONF = 'project.urls'
