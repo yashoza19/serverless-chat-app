@@ -230,7 +230,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593302110036-2020-06-27T23:55:10.036Z/serverless-chat.zip"
               },
               "FunctionName": "serverless-chat-dev-connectionManager",
               "Handler": "handler.connection_manager",
@@ -248,14 +248,14 @@
               "ConnectionManagerLogGroup"
             ]
           },
-          "ConnectionManagerLambdaVersionnI9z4Y22bQWl1U8qhR7A4TSDGRPxjq653aqkikNmbxw": {
+          "ConnectionManagerLambdaVersionbUS2jXTMlikfkFg05O2LqxIv3IbV7w6DRdHcp1u68": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ConnectionManagerLambdaFunction"
               },
-              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
+              "CodeSha256": "H6QeE0AZomj3cMnTNFCREXhS/BiEgLSkwaTxjV7p0uE="
             }
           },
           "DefaultMessageLambdaFunction": {
@@ -265,7 +265,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593302110036-2020-06-27T23:55:10.036Z/serverless-chat.zip"
               },
               "FunctionName": "serverless-chat-dev-defaultMessage",
               "Handler": "handler.default_message",
@@ -283,14 +283,14 @@
               "DefaultMessageLogGroup"
             ]
           },
-          "DefaultMessageLambdaVersiony4keGm7myJShJ8G1N9aRL7YctJdUXgUHJfVJu4gTI": {
+          "DefaultMessageLambdaVersionbo5OVwNniKBUmBnYconeJiLfhAfS6kYVskNwrp4WTo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DefaultMessageLambdaFunction"
               },
-              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
+              "CodeSha256": "H6QeE0AZomj3cMnTNFCREXhS/BiEgLSkwaTxjV7p0uE="
             }
           },
           "GetRecentMessagesLambdaFunction": {
@@ -300,7 +300,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593302110036-2020-06-27T23:55:10.036Z/serverless-chat.zip"
               },
               "FunctionName": "serverless-chat-dev-getRecentMessages",
               "Handler": "handler.get_recent_messages",
@@ -318,14 +318,14 @@
               "GetRecentMessagesLogGroup"
             ]
           },
-          "GetRecentMessagesLambdaVersionIVCgqhLvuZD9XIb0aHyMvZfd2LUDuiIlS2QY7bk": {
+          "GetRecentMessagesLambdaVersionhF1UkHVzuXGq9ONQr8Pv34vCy2ueW3JLl30b2PWQo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetRecentMessagesLambdaFunction"
               },
-              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
+              "CodeSha256": "H6QeE0AZomj3cMnTNFCREXhS/BiEgLSkwaTxjV7p0uE="
             }
           },
           "SendMessageLambdaFunction": {
@@ -335,7 +335,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593302110036-2020-06-27T23:55:10.036Z/serverless-chat.zip"
               },
               "FunctionName": "serverless-chat-dev-sendMessage",
               "Handler": "handler.send_message",
@@ -353,14 +353,14 @@
               "SendMessageLogGroup"
             ]
           },
-          "SendMessageLambdaVersiondwsF09ghHrotG4VzHw8V0YSBdT6MIUCyZgobMy6trg": {
+          "SendMessageLambdaVersionyIvFup7lyLatem7s7F4SAyOuLJD7fUPFFtieGk6Uo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SendMessageLambdaFunction"
               },
-              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
+              "CodeSha256": "H6QeE0AZomj3cMnTNFCREXhS/BiEgLSkwaTxjV7p0uE="
             }
           },
           "PingLambdaFunction": {
@@ -370,7 +370,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z/serverless-chat.zip"
+                "S3Key": "serverless/serverless-chat/dev/1593302110036-2020-06-27T23:55:10.036Z/serverless-chat.zip"
               },
               "FunctionName": "serverless-chat-dev-ping",
               "Handler": "handler.ping",
@@ -388,14 +388,14 @@
               "PingLogGroup"
             ]
           },
-          "PingLambdaVersion4PuwhQzlH2oOVeBsDMrptuthMM7ZYkIR2Yq4TwF04vQ": {
+          "PingLambdaVersion87tVwmJ5y7FJR1LMhUzb378EiK6ETdgs9ibcN9IjR4k": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PingLambdaFunction"
               },
-              "CodeSha256": "WRN9/wyqtzwa4KqMwpbXLlfqd0f0fhMfTab+0DlQDKM="
+              "CodeSha256": "H6QeE0AZomj3cMnTNFCREXhS/BiEgLSkwaTxjV7p0uE="
             }
           },
           "ApiGatewayRestApi": {
@@ -468,7 +468,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1593028758840": {
+          "ApiGatewayDeployment1593302102322": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -866,31 +866,31 @@
           "ConnectionManagerLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ConnectionManagerLambdaVersionnI9z4Y22bQWl1U8qhR7A4TSDGRPxjq653aqkikNmbxw"
+              "Ref": "ConnectionManagerLambdaVersionbUS2jXTMlikfkFg05O2LqxIv3IbV7w6DRdHcp1u68"
             }
           },
           "DefaultMessageLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DefaultMessageLambdaVersiony4keGm7myJShJ8G1N9aRL7YctJdUXgUHJfVJu4gTI"
+              "Ref": "DefaultMessageLambdaVersionbo5OVwNniKBUmBnYconeJiLfhAfS6kYVskNwrp4WTo"
             }
           },
           "GetRecentMessagesLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetRecentMessagesLambdaVersionIVCgqhLvuZD9XIb0aHyMvZfd2LUDuiIlS2QY7bk"
+              "Ref": "GetRecentMessagesLambdaVersionhF1UkHVzuXGq9ONQr8Pv34vCy2ueW3JLl30b2PWQo"
             }
           },
           "SendMessageLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SendMessageLambdaVersiondwsF09ghHrotG4VzHw8V0YSBdT6MIUCyZgobMy6trg"
+              "Ref": "SendMessageLambdaVersionyIvFup7lyLatem7s7F4SAyOuLJD7fUPFFtieGk6Uo"
             }
           },
           "PingLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PingLambdaVersion4PuwhQzlH2oOVeBsDMrptuthMM7ZYkIR2Yq4TwF04vQ"
+              "Ref": "PingLambdaVersion87tVwmJ5y7FJR1LMhUzb378EiK6ETdgs9ibcN9IjR4k"
             }
           },
           "ServiceEndpoint": {
@@ -1041,7 +1041,7 @@
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "ConnectionManagerLambdaVersionnI9z4Y22bQWl1U8qhR7A4TSDGRPxjq653aqkikNmbxw"
+        "versionLogicalId": "ConnectionManagerLambdaVersionbUS2jXTMlikfkFg05O2LqxIv3IbV7w6DRdHcp1u68"
       },
       "defaultMessage": {
         "handler": "handler.default_message",
@@ -1058,7 +1058,7 @@
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "DefaultMessageLambdaVersiony4keGm7myJShJ8G1N9aRL7YctJdUXgUHJfVJu4gTI"
+        "versionLogicalId": "DefaultMessageLambdaVersionbo5OVwNniKBUmBnYconeJiLfhAfS6kYVskNwrp4WTo"
       },
       "getRecentMessages": {
         "handler": "handler.get_recent_messages",
@@ -1075,7 +1075,7 @@
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "GetRecentMessagesLambdaVersionIVCgqhLvuZD9XIb0aHyMvZfd2LUDuiIlS2QY7bk"
+        "versionLogicalId": "GetRecentMessagesLambdaVersionhF1UkHVzuXGq9ONQr8Pv34vCy2ueW3JLl30b2PWQo"
       },
       "sendMessage": {
         "handler": "handler.send_message",
@@ -1092,7 +1092,7 @@
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "SendMessageLambdaVersiondwsF09ghHrotG4VzHw8V0YSBdT6MIUCyZgobMy6trg"
+        "versionLogicalId": "SendMessageLambdaVersionyIvFup7lyLatem7s7F4SAyOuLJD7fUPFFtieGk6Uo"
       },
       "ping": {
         "handler": "handler.ping",
@@ -1111,7 +1111,7 @@
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "PingLambdaVersion4PuwhQzlH2oOVeBsDMrptuthMM7ZYkIR2Yq4TwF04vQ"
+        "versionLogicalId": "PingLambdaVersion87tVwmJ5y7FJR1LMhUzb378EiK6ETdgs9ibcN9IjR4k"
       }
     },
     "serviceFilename": "serverless.yml",
@@ -1120,7 +1120,7 @@
     "artifact": "/Users/yashoza/Desktop/serverless-chat-app/backend/.serverless/serverless-chat.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/serverless-chat/dev/1593028766266-2020-06-24T19:59:26.266Z",
+    "artifactDirectoryName": "serverless/serverless-chat/dev/1593302110036-2020-06-27T23:55:10.036Z",
     "artifact": "serverless-chat.zip"
   }
 }
